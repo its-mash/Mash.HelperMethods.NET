@@ -41,9 +41,9 @@ namespace Mash.HelperMethods.NET.ExtensionMethods
             for (int i = 0; i < s.Length; i++)
             {
                 char ch = s[i];
-                if (ch <= '.')
+                if (ch <= '9' && ch >= '&')
                 {
-                    if (ch == '.') continue;
+                    if (ch == '.' || ch >= '0') continue;
 
                     if (ch == '-' || ch == '\'' || ch == '&')
                     {
