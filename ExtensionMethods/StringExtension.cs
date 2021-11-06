@@ -32,20 +32,28 @@ namespace Mash.HelperMethods.NET.ExtensionMethods
         {
             return !(ch < 'A' || ch > 'z' || (ch > 'Z' && ch < 'a')) || ch == '-';
         }
+
+
+        //  TODO: Update logic to ensure word doesn't contain  "'" multiple times and together with "-"  if necessary
         public static bool IsValidEnglishWord(this string s)
         {
             if (s.IsNullOrEmpty()) return false;
             for (int i = 0; i < s.Length; i++)
             {
                 char ch = s[i];
-                if (ch == '-' || ch == '\'')
+                if (ch <= '.')
                 {
-                    if (i != s.Length - 1)
-                    {
-                        continue;
-                    }
+                    if (ch == '.') continue;
 
-                    return false;
+                    if (ch == '-' || ch == '\'' || ch == '&')
+                    {
+                        if (i != 0 && i != s.Length - 1)
+                        {
+                            continue;
+                        }
+
+                        return false;
+                    }
                 }
                 if (ch < 'A' || ch > 'z' || (ch > 'Z' && ch < 'a')) return false;
 
