@@ -1,32 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "E:\\git\\MyInterview\\Sitecore\\Seo-Optimizer\\Mash.HelperMethods.NET\\Mash.HelperMethods.NET.csproj": {}
+    "E:\\git\\MyInterview\\Sitecore\\Mash.SEO-Analyser.NET\\Mash.AhoCorasick.NET\\Mash.HelperMethods.NET\\Mash.HelperMethods.NET.csproj": {}
   },
   "projects": {
-    "E:\\git\\MyInterview\\Sitecore\\Seo-Optimizer\\Mash.HelperMethods.NET\\Mash.HelperMethods.NET.csproj": {
+    "E:\\git\\MyInterview\\Sitecore\\Mash.SEO-Analyser.NET\\Mash.AhoCorasick.NET\\Mash.HelperMethods.NET\\Mash.HelperMethods.NET.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\git\\MyInterview\\Sitecore\\Seo-Optimizer\\Mash.HelperMethods.NET\\Mash.HelperMethods.NET.csproj",
+        "projectUniqueName": "E:\\git\\MyInterview\\Sitecore\\Mash.SEO-Analyser.NET\\Mash.AhoCorasick.NET\\Mash.HelperMethods.NET\\Mash.HelperMethods.NET.csproj",
         "projectName": "Mash.HelperMethods.NET",
-        "projectPath": "E:\\git\\MyInterview\\Sitecore\\Seo-Optimizer\\Mash.HelperMethods.NET\\Mash.HelperMethods.NET.csproj",
+        "projectPath": "E:\\git\\MyInterview\\Sitecore\\Mash.SEO-Analyser.NET\\Mash.AhoCorasick.NET\\Mash.HelperMethods.NET\\Mash.HelperMethods.NET.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "E:\\git\\MyInterview\\Sitecore\\Seo-Optimizer\\Mash.HelperMethods.NET\\obj\\",
+        "outputPath": "E:\\git\\MyInterview\\Sitecore\\Mash.SEO-Analyser.NET\\Mash.AhoCorasick.NET\\Mash.HelperMethods.NET\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.1"
+          "netstandard1.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.1": {
-            "targetAlias": "netstandard2.1",
+          "netstandard1.1": {
+            "targetAlias": "netstandard1.1",
             "projectReferences": {}
           }
         },
@@ -37,21 +37,13 @@
         }
       },
       "frameworks": {
-        "netstandard2.1": {
-          "targetAlias": "netstandard2.1",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
+        "netstandard1.1": {
+          "targetAlias": "netstandard1.1",
+          "dependencies": {
             "NETStandard.Library": {
-              "privateAssets": "all"
+              "target": "Package",
+              "version": "[1.6.1, )",
+              "autoReferenced": true
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
