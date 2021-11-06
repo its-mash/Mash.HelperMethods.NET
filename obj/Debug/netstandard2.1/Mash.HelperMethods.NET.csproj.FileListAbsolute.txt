@@ -1,0 +1,10 @@
+E:\git\MyInterview\Sitecore\Seo-Optimizer\Mash.HelperMethods.NET\bin\Debug\netstandard2.1\Mash.HelperMethods.NET.deps.json
+E:\git\MyInterview\Sitecore\Seo-Optimizer\Mash.HelperMethods.NET\bin\Debug\netstandard2.1\Mash.HelperMethods.NET.dll
+E:\git\MyInterview\Sitecore\Seo-Optimizer\Mash.HelperMethods.NET\bin\Debug\netstandard2.1\Mash.HelperMethods.NET.pdb
+E:\git\MyInterview\Sitecore\Seo-Optimizer\Mash.HelperMethods.NET\obj\Debug\netstandard2.1\Mash.HelperMethods.NET.csproj.AssemblyReference.cache
+E:\git\MyInterview\Sitecore\Seo-Optimizer\Mash.HelperMethods.NET\obj\Debug\netstandard2.1\Mash.HelperMethods.NET.GeneratedMSBuildEditorConfig.editorconfig
+E:\git\MyInterview\Sitecore\Seo-Optimizer\Mash.HelperMethods.NET\obj\Debug\netstandard2.1\Mash.HelperMethods.NET.AssemblyInfoInputs.cache
+E:\git\MyInterview\Sitecore\Seo-Optimizer\Mash.HelperMethods.NET\obj\Debug\netstandard2.1\Mash.HelperMethods.NET.AssemblyInfo.cs
+E:\git\MyInterview\Sitecore\Seo-Optimizer\Mash.HelperMethods.NET\obj\Debug\netstandard2.1\Mash.HelperMethods.NET.csproj.CoreCompileInputs.cache
+E:\git\MyInterview\Sitecore\Seo-Optimizer\Mash.HelperMethods.NET\obj\Debug\netstandard2.1\Mash.HelperMethods.NET.dll
+E:\git\MyInterview\Sitecore\Seo-Optimizer\Mash.HelperMethods.NET\obj\Debug\netstandard2.1\Mash.HelperMethods.NET.pdb
