@@ -38,7 +38,7 @@ namespace Mash.HelperMethods.NET.ExtensionMethods
             for (int i = 0; i < s.Length; i++)
             {
                 char ch = s[i];
-                if (ch == '-')
+                if (ch == '-' || ch == '\'')
                 {
                     if (i != s.Length - 1)
                     {
