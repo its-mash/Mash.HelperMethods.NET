@@ -31,18 +31,48 @@ namespace Mash.HelperMethods.NET.ExtensionMethods
         public static string GetBodyText(this HtmlDocument document)
         {
             var body = document.DocumentNode.SelectSingleNode("//body");
-            return body.InnerText;
+            return body.InnerText.RemoveRepeatingWhiteSpace();
         }
+
+        private static string RemoveRepeatingWhiteSpace(this string text)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            bool lastCharWhiteSpace = false;
+            for (int i = 0; i < text.Length; i++)
+            {
+                char ch = text[i];
+                bool isWhiteSpace = ch == ' ' || ch == '\t' || ch == '\n' || ch == '\r';
+                if (!isWhiteSpace || !lastCharWhiteSpace)
+                {
+                    sb.Append(isWhiteSpace?' ':ch);
+                }
+
+                lastCharWhiteSpace = isWhiteSpace;
+
+            }
+
+            return sb.ToString();
+        }
+
         public static string[] GetMetaKeywords(this HtmlDocument document)
         {
             var keywordsContent = string.Empty;
+            var sb = new StringBuilder();
+
             //HtmlNode metaNode = document.DocumentNode.SelectSingleNode("//meta[contains(@name, 'keyword')]");
-            HtmlNode metaNode = document.DocumentNode.SelectSingleNode("/html/head/meta[@name='description' OR contains(@name,'keyword')]");
-            if (metaNode != null)
+            var metaNodes = document.DocumentNode.SelectNodes("//meta/@content");
+            //var metaNodes = document.DocumentNode.SelectNodes("/html/head/meta[contains(@name,\"keyword\")|contains(@name,\"description\") ]");
+            if (metaNodes != null)
             {
-                keywordsContent = metaNode.GetAttributeValue("content", string.Empty);
+                foreach (var metaNode in metaNodes)
+                {
+                    sb.Append(metaNode.GetAttributeValue("content", string.Empty));
+                }
+
             }
 
+            keywordsContent = sb.ToString();
             if (!string.IsNullOrEmpty(keywordsContent))
             {
                 return keywordsContent.Split(_separators, StringSplitOptions.RemoveEmptyEntries);
@@ -60,8 +90,9 @@ namespace Mash.HelperMethods.NET.ExtensionMethods
             var links = body.SelectNodes("//a").Select(h => h.GetAttributeValue("href", "#"));
             foreach (var anchor in links)
             {
-                if (!anchor.Contains(domain) && !InvalidChars.Any(anchor.Contains) && anchor.IndexOf('/') != 0 && anchor.IndexOf('#') != 0)
+                if (!anchor.Contains(domain) && !InvalidChars.Any(anchor.Contains) && anchor.IndexOf('/') != 0 && anchor.IndexOf('#') != 0 && ValidDomainName(anchor))
                 {
+
                     externalLinksCount.IncrementValueBy1(anchor);
                 }
             }
@@ -69,6 +100,23 @@ namespace Mash.HelperMethods.NET.ExtensionMethods
             return externalLinksCount;
         }
 
+        private static bool ValidDomainName(string url)
+        {
+            if (url.StartsWith("http") || url.StartsWith("ftp") || url.StartsWith("file"))
+            {
+                return true;
+            }
+            for (int i = 0; i < url.Length; i++)
+            {
+                if (url[i] == '.') return true;
+                if (url[i] == '/')
+                {
+                    return false;
+                }
+            }
 
+            return false;
+
+        }
     }
 }
