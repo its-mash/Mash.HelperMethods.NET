@@ -40,6 +40,10 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
+            "HtmlAgilityPack": {
+              "target": "Package",
+              "version": "[1.11.37, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",

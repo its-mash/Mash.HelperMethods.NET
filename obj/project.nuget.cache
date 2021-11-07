@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "8+GuBBOm6Wb0Wn4CmzkJ2VuAR2FLv8j51AwG62VmCp9nZIKtabDPynxQ08H8wCzOsVWL4SMsAlUC2Dr2U06Ihg==",
+  "dgSpecHash": "nUWKM751VTNTBIxeasiJu+ER64Ow/Gt/k35RnIkaY1VdOA36IVLyNtAu1ZGZXgR4aU1x7bQ0NaWil0wRUmZjNQ==",
   "success": true,
   "projectFilePath": "E:\\git\\MyInterview\\Sitecore\\Mash.SEO-Analyser.NET\\Mash.AhoCorasick.NET\\Mash.HelperMethods.NET\\Mash.HelperMethods.NET.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Asus\\.nuget\\packages\\htmlagilitypack\\1.11.37\\htmlagilitypack.1.11.37.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],

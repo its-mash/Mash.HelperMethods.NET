@@ -18,5 +18,12 @@ namespace Mash.HelperMethods.NET.ExtensionMethods
             }
 
         }
+        public static void InitializeValueToZeroIfKeyDoesNotExist<K>(this Dictionary<K, int> dictionary, K key)
+        {
+            if (!dictionary.ContainsKey(key))
+            {
+                dictionary.Add(key, 0);
+            }
+        }
     }
 }

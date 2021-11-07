@@ -32,7 +32,17 @@ namespace Mash.HelperMethods.NET.ExtensionMethods
             {
                 return ch <= 'Z' || ch >= 'a';
             }
-            return (ch >= '0' && ch <= '9');
+            return ((ch >= '0' && ch <= '9') || ch == '\'');
+
+        }
+        public static bool IsValidMetaWordContinuingCharacter(this char ch)
+        {
+            if (ch > 'z') return false;
+            if (ch >= 'A')
+            {
+                return ch <= 'Z' || ch >= 'a';
+            }
+            return ((ch >= '0' && ch <= '9') || ch == '\'' || ch == '.' || ch == '-');
 
         }
 
