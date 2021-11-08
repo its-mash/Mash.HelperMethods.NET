@@ -79,5 +79,28 @@ namespace Mash.HelperMethods.NET.ExtensionMethods
 
             return false;
         }
+        public static bool IsThisLowerCaseCharacterIsValidWordCharacter(this char ch, out bool isNoneRepeatableCharacter)
+        {
+            isNoneRepeatableCharacter = false;
+            if (ch > 'z') return false;
+            if (ch >= 'a')
+            {
+                return true;
+            }
+
+            if (ch >= '0' && ch <= '9')
+            {
+                return true;
+            }
+
+            if (ch == '-' || ch == '\'' || ch == '&' || ch == '.')
+            {
+                isNoneRepeatableCharacter = true;
+                return true;
+
+            }
+
+            return false;
+        }
     }
 }
