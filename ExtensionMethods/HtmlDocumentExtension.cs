@@ -45,7 +45,7 @@ namespace Mash.HelperMethods.NET.ExtensionMethods
                 bool isWhiteSpace = ch == ' ' || ch == '\t' || ch == '\n' || ch == '\r';
                 if (!isWhiteSpace || !lastCharWhiteSpace)
                 {
-                    sb.Append(isWhiteSpace?' ':ch);
+                    sb.Append(isWhiteSpace ? ' ' : ch);
                 }
 
                 lastCharWhiteSpace = isWhiteSpace;
@@ -61,8 +61,17 @@ namespace Mash.HelperMethods.NET.ExtensionMethods
             var sb = new StringBuilder();
 
             //HtmlNode metaNode = document.DocumentNode.SelectSingleNode("//meta[contains(@name, 'keyword')]");
-            var metaNodes = document.DocumentNode.SelectNodes("//meta/@content");
-            //var metaNodes = document.DocumentNode.SelectNodes("/html/head/meta[contains(@name,\"keyword\")|contains(@name,\"description\") ]");
+            //var metaNodes = document.DocumentNode.SelectNodes("//meta/@content");
+            var metaNodes = document.DocumentNode.SelectNodes("/html/head/meta[contains(@name,'description')]");
+            if (metaNodes != null)
+            {
+                foreach (var metaNode in metaNodes)
+                {
+                    sb.Append(metaNode.GetAttributeValue("content", string.Empty));
+                }
+
+            }
+            metaNodes = document.DocumentNode.SelectNodes("/html/head/meta[contains(@name,'keywords')]");
             if (metaNodes != null)
             {
                 foreach (var metaNode in metaNodes)
