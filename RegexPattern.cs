@@ -15,5 +15,7 @@ namespace Mash.HelperMethods.NET
         /// </summary>
         public const string LinkPattern3 =
             @"(?:(?:https?|ftp|file):\/\/|\b(?:[a-z\d]+\.))(?:(?:[^\s()<>]+|\((?:[^\s()<>]+|(?:\([^\s()<>]+\)))?\))+(?:\((?:[^\s()<>]+|(?:\(?:[^\s()<>]+\)))?\)|[^\s`!()\[\]{};:'"".,<>?«»“”‘’]))?";
+
+        public const string absoluteUrlCheckWithOrWithoutScheme = @"^(?:[a-z]+:)?//";
     }
 }
