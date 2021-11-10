@@ -243,11 +243,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\git\\MyInterview\\Sitecore\\Mash.SEOAnalyzer.Web.NET\\Mash.SEOAnalyzer.NET\\Mash.AhoCorasick.NET\\Mash.HelperMethods.NET\\Mash.HelperMethods.NET.csproj",
+      "projectUniqueName": "C:\\Users\\Asus\\Desktop\\Mash.SEOAnalyzer.Web.NET\\Mash.SEOAnalyzer.NET\\Mash.AhoCorasick.NET\\Mash.HelperMethods.NET\\Mash.HelperMethods.NET.csproj",
       "projectName": "Mash.HelperMethods.NET",
-      "projectPath": "E:\\git\\MyInterview\\Sitecore\\Mash.SEOAnalyzer.Web.NET\\Mash.SEOAnalyzer.NET\\Mash.AhoCorasick.NET\\Mash.HelperMethods.NET\\Mash.HelperMethods.NET.csproj",
+      "projectPath": "C:\\Users\\Asus\\Desktop\\Mash.SEOAnalyzer.Web.NET\\Mash.SEOAnalyzer.NET\\Mash.AhoCorasick.NET\\Mash.HelperMethods.NET\\Mash.HelperMethods.NET.csproj",
       "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-      "outputPath": "E:\\git\\MyInterview\\Sitecore\\Mash.SEOAnalyzer.Web.NET\\Mash.SEOAnalyzer.NET\\Mash.AhoCorasick.NET\\Mash.HelperMethods.NET\\obj\\",
+      "outputPath": "C:\\Users\\Asus\\Desktop\\Mash.SEOAnalyzer.Web.NET\\Mash.SEOAnalyzer.NET\\Mash.AhoCorasick.NET\\Mash.HelperMethods.NET\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
